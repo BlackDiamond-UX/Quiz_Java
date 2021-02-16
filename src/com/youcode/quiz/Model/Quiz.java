@@ -9,7 +9,7 @@ public class Quiz implements ActionListener {
 	// Niveau 1
 	String[] questions = { "JAVA est un langage?", "Toutes les classes héritent de la classe?",
 			"Par convention une classe?", "Est-ce que on peut avoir plusieurs constructeurs pour la même classe?",
-			"Dans la ligne \"public class A implements B\", B est", "",
+			"Dans la ligne \"public class A implements B\", B est", "wach le test est bien ?","",
 			"Après la compilation, un programme écrit en JAVA, il se transforme en programme en bytecode Quelle est l’extension du programme en bytecode?",
 			"Class Test{\r\n" + "Public Test () {\r\n" + "System.out.println(”Bonjour”);}\r\n"
 					+ "public Test (int i) {\r\n" + "this();\r\n"
@@ -31,13 +31,13 @@ public class Quiz implements ActionListener {
 					+ "{System.out.println (\"je suis à l’intérieur de\r\n" + "finally\");}}}\r\n" };
 	String[][] options = { { "Compilé", "Interprété", "Compilé et interpreté" }, { "Main", "Object", "AWT" },
 			{ "est en minuscule", "commence par une majuscule", "est en majuscules" }, { "oui ", "non" },
-			{ "Interfacce", "Classe parent", "Package" }, {}, { "aucun des choix", ".java", ".Class" },
+			{ "Interfacce", "Classe parent", "Package" }, { "oui ", "non" },{}, { "aucun des choix", ".java", ".Class" },
 			{ "aucun des choix", "Bonjour Nous sommes en 2018!", "Nous sommes en 2018!" }, { "vrai", "faux" },
 			{ "aucun des choix", "final", "const" }, { "aucun des choix", "this", "super" }, {},
 			{ "aucun des choix", "surchargée", "redéfinie" }, { "vrais", "faux" }, { "vrais", "faux" },
 			{ "vrais", "faux" }, { "Interfacce", "a = 10 , b = 0 Je suis à l’intérieur de finally",
 					"a = 10 b = 0 diviser par 0! je suis à l’intérieur de finally" } };
-	char[] answers = { 'A', 'C', 'B', 'A', 'A', ' ', 'B', 'B', 'A', 'B', 'A', ' ', 'C', 'A', 'A', 'A', 'C' };
+	char[] answers = { 'A', 'C', 'B', 'A', 'A', 'A',' ', 'B', 'B', 'A', 'B', 'A', ' ', 'C', 'A', 'A', 'A', 'C' };
 
 	char guess;
 	char answer;
@@ -201,7 +201,7 @@ public class Quiz implements ActionListener {
 
 	public void nextQuestion() {
 
-		if (index == 5 || index == 11 || index == 17) {
+		if (index == 6 || index == 11 || index == 17) {
 			results();
 		} else {
 
@@ -224,7 +224,7 @@ public class Quiz implements ActionListener {
 
 				}
 			}
-			if (index <= 5) {
+			if (index <= 6) {
 				textfield.setText("Niveau 1");
 			} else if (index <= 11) {
 				textfield.setText("Niveau 2");
